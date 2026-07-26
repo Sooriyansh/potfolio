@@ -28,7 +28,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",
-    "@next/swc-win32-x64-msvc": "^16.2.12",
     "@tailwindcss/oxide-win32-x64-msvc": "^4.3.3",
     "@tailwindcss/postcss": "^4",
     "babel-plugin-react-compiler": "1.0.0",
