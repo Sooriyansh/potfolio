@@ -1,0 +1,3 @@
+import mongoose from 'mongoose';
+const schema=new mongoose.Schema({generatedPromptId:{type:mongoose.Schema.Types.ObjectId,ref:'GeneratedPrompt',required:true,unique:true,index:true},websiteType:String,purpose:[String],contentLanguages:[String],programmingLanguage:String,frontend:[String],backend:[String],database:String,authentication:[String],designStyles:[String],colorTheme:String,pages:[String],sections:[String],features:[String],threeD:[String],businessFeatures:[String],integrations:[String],deployment:String,additional:String},{timestamps:true});
+export default mongoose.models.PromptSelection||mongoose.model('PromptSelection',schema);

@@ -1,0 +1,4 @@
+import mongoose from 'mongoose';
+const schema=new mongoose.Schema({portfolioId:{type:mongoose.Schema.Types.ObjectId,ref:'Portfolio',required:true,index:true},pageId:{type:mongoose.Schema.Types.ObjectId,ref:'PortfolioPage',required:true,index:true},componentId:{type:String,required:true},type:{type:String,required:true,index:true},parentId:{type:String,default:null},order:{type:Number,default:0},name:String,content:{type:mongoose.Schema.Types.Mixed,default:{}},styles:{type:mongoose.Schema.Types.Mixed,default:{}},responsive:{type:mongoose.Schema.Types.Mixed,default:{}},animation:{type:mongoose.Schema.Types.Mixed,default:{}},visible:{type:Boolean,default:true},locked:{type:Boolean,default:false}},{timestamps:true});
+schema.index({portfolioId:1,componentId:1},{unique:true});schema.index({pageId:1,parentId:1,order:1});
+export default mongoose.models.PortfolioComponent||mongoose.model('PortfolioComponent',schema);

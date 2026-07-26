@@ -1,0 +1,1 @@
+import {projects} from '@/data/portfolio';export default function sitemap(){const base=process.env.NEXT_PUBLIC_SITE_URL||'http://localhost:3000';return['','/projects','/journey','/contact','/resume','/builder','/builder/editor','/website-prompt-generator',...projects.map(p=>`/projects/${p.slug}`)].map(url=>({url:base+url,lastModified:new Date()}))}

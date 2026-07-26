@@ -1,0 +1,1 @@
+export default function ProjectIndex({ active, total }) { return <div className="fixed-project-index" aria-hidden="true"><span>{String(active + 1).padStart(2, '0')}</span><i/><small>{String(total).padStart(2, '0')}</small></div>; }

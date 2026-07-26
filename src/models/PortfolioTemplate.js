@@ -1,0 +1,3 @@
+import mongoose from 'mongoose';
+const schema=new mongoose.Schema({templateId:{type:String,required:true,unique:true,index:true},name:{type:String,required:true},category:{type:String,required:true,index:true},description:String,thumbnail:String,componentTree:{type:mongoose.Schema.Types.Mixed,required:true},designTokens:{type:mongoose.Schema.Types.Mixed,default:{}},is3D:{type:Boolean,default:false},featured:{type:Boolean,default:false,index:true},active:{type:Boolean,default:true,index:true},usageCount:{type:Number,default:0}},{timestamps:true});
+export default mongoose.models.PortfolioTemplate||mongoose.model('PortfolioTemplate',schema);
