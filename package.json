@@ -2,6 +2,9 @@
   "name": "potfolio",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",
@@ -28,13 +31,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",
-    "@tailwindcss/oxide-win32-x64-msvc": "^4.3.3",
     "@tailwindcss/postcss": "^4",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "^16.2.12",
     "hermes-parser": "^0.37.0",
-    "lightningcss-win32-x64-msvc": "^1.32.0",
     "tailwindcss": "^4"
   }
 }
